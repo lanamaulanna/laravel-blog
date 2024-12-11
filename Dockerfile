@@ -31,6 +31,3 @@ COPY --chown=www-data:www-data . /var/www/html
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
 # Precompiling assets for production
-RUN yarn install --immutable && \
-    yarn build && \
-    rm -rf node_modules
